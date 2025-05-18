@@ -35,7 +35,14 @@ In this experiment, I will test the adaptability of the framework to entirely ne
 
 Now, I have finetuned the model by freezing first 5 layers and training for 40000 steps with the medical image dataset. One more challenging task is that there is no paired dataset for training. But the model architecture was made for paired dataset. I was curious to know how does the U-Net architecture (generator) and the patch-GAN (discriminator) works with unpaired data, since the architecture is very similar to Cycle GANs in terms of architecture.
 
+New Experiment 2
 
+Zero Shot and few shot Translation:
+In this experiment, I have trained the model on a different task (label to image with facades dataset) and tested on a different task (semantic label to image on cityscape dataset).
+
+New Experiment 3
+
+I conducted an experiment to evaluate the robustness of the model to noisy inputs. Added mixed dataset while training, where I manually created a dataset folder containing dataset from all tasks tested so far (semantic labels to image generation, semantic segmentation, image to sketch translation) and then tested the model performance. The model performed well on test dataset (Facades), as while training, I used data augmentation such as jittering, flipping and random cropping. 
 
 
 
